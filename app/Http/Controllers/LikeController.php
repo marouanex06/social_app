@@ -1,18 +1,31 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Like;
+use Illuminate\Http\Request;
 
 class LikeController extends Controller
 {
-    public function like($post_id){
+    public function store($post_id) {
+        $already = Like::where('user_id', session('user_id'))
+                       ->where('post_id', $post_id)
+                       ->exists();
 
-Like::create([
-'user_id'=>session('user_id'),
-'post_id'=>$post_id
-]);
+        if (!$already) {
+            Like::create([
+                'user_id' => session('user_id'),
+                'post_id' => $post_id,
+            ]);
+        }
 
-}
+        return back();
+    }
+
+    public function destroy($post_id) {
+        Like::where('user_id', session('user_id'))
+            ->where('post_id', $post_id)
+            ->delete();
+
+        return back();
+    }
 }
