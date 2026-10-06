@@ -1,21 +1,21 @@
 # Social App
 
-A Laravel-based web application project focused on building a social platform with a structured backend, database layer and modern frontend tooling.
+Application web basée sur Laravel, développée autour d’une plateforme sociale avec une architecture backend structurée, une base de données et des outils frontend modernes.
 
-## Overview
+## Présentation
 
-This project is built with Laravel and follows the framework's MVC architecture. It includes application logic, database migrations, routes, resources and frontend assets.
+Ce projet est développé avec Laravel et suit l’architecture MVC du framework. Il comprend la logique applicative, les migrations de base de données, les routes, les ressources et les outils nécessaires à la gestion des assets frontend.
 
-## Features
+## Fonctionnalités
 
-- User-oriented web application structure
-- Laravel MVC architecture
-- Database migrations and models
-- Application routing
-- Frontend asset management with Vite
-- Testing structure
+- Structure d’application web orientée utilisateurs
+- Architecture MVC avec Laravel
+- Migrations et modèles de données
+- Gestion des routes
+- Gestion des assets frontend avec Vite
+- Structure dédiée aux tests
 
-## Tech Stack
+## Technologies utilisées
 
 - PHP
 - Laravel
@@ -25,21 +25,21 @@ This project is built with Laravel and follows the framework's MVC architecture.
 - MySQL
 - PHPUnit
 
-## Getting Started
+## Installation
 
 ```bash
 composer install
 npm install
 ```
 
-Configure your environment:
+Configurer l’environnement :
 
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-Then configure the database in `.env` and run:
+Configurer ensuite la base de données dans le fichier `.env`, puis lancer :
 
 ```bash
 php artisan migrate
@@ -47,18 +47,18 @@ php artisan serve
 npm run dev
 ```
 
-## Project Structure
+## Structure du projet
 
-- `app/` — application logic
-- `database/` — migrations and seeders
-- `resources/` — frontend resources
-- `routes/` — application routes
-- `tests/` — automated tests
-- `public/` — public assets
+- `app/` — logique applicative
+- `database/` — migrations et seeders
+- `resources/` — ressources frontend
+- `routes/` — routes de l’application
+- `tests/` — tests automatisés
+- `public/` — ressources publiques
 
-## Author
+## Auteur
 
 **Marouane El Khayati**  
-Full Stack Web Developer
+Développeur Web Full Stack
 
 [GitHub](https://github.com/marouanex06)
